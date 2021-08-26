@@ -30,8 +30,8 @@ export class HeaderComponent implements OnInit {
       className: 'bi bi-bookshelf',
     },
     {
-      href: '/#contact',
-      name: 'Contact',
+      href: '/#connect',
+      name: 'Connect',
       className: 'bi bi-envelope',
     },
   ];

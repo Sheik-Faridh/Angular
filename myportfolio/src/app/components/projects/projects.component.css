@@ -1,0 +1,445 @@
+section.project-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+section.project-section main {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+section.project-section main > h2 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  color: var(--secondary-light-color);
+  margin: 10px 0px 40px;
+}
+
+section.project-section main > h2 i {
+  margin: 0 10px;
+  color: var(--primary-color);
+}
+
+section.project-section main > h2::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--secondary-color);
+}
+
+section.project-section main div.main-projects div.feature-project {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 100px;
+}
+
+section.project-section main div.main-projects div.feature-project.odd {
+  flex-direction: row-reverse;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project
+  div.img-wrapper {
+  position: relative;
+  flex-basis: 50%;
+  box-shadow: 0 10px 30px -15px var(--box-shadow-color);
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project
+  div.img-wrapper
+  div.mask-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #64ffda7d;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project
+  div.img-wrapper
+  div.mask-layer:hover {
+  background: transparent;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project
+  div.img-wrapper
+  img {
+  width: 100%;
+  height: 100%;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project
+  div.data-container {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  flex-basis: 50%;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project.odd
+  div.data-container {
+  text-align: left;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project.odd
+  div.data-container
+  h2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project
+  div.data-container
+  h2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project
+  div.data-container
+  h2
+  div.logo-wrapper {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project
+  div.data-container
+  h2
+  div.logo-wrapper
+  img {
+  width: 100%;
+  height: 100%;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project
+  div.data-container
+  h2
+  a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 26px;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project
+  div.data-container
+  h2
+  a:hover {
+  color: var(--primary-color);
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project
+  div.data-container
+  div.description {
+  position: relative;
+  right: 50px;
+  z-index: 2;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--secondary-lightest-color);
+  padding: 15px;
+  background-color: var(--bg-light-navy);
+  border-radius: 5px;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project.odd
+  div.data-container
+  div.description {
+  left: 50px;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project
+  div.data-container
+  ul.technology {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 10px;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project.odd
+  div.data-container
+  ul.technology {
+  justify-content: flex-start;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project
+  div.data-container
+  ul.technology
+  li {
+  padding: 3px 15px;
+  color: var(--secondary-light-color);
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project.odd
+  div.data-container
+  div.project-link {
+  margin: 10px 0 0 10px;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project
+  div.data-container
+  div.project-link {
+  margin: 10px 10px 0 0;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project
+  div.data-container
+  div.project-link
+  a {
+  color: var(--secondary-light-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+section.project-section
+  main
+  div.main-projects
+  div.feature-project
+  div.data-container
+  div.project-link
+  a:hover {
+  color: var(--secondary-lightest-color);
+}
+
+section.project-section main div.other-projects > h2 {
+  text-align: center;
+  font-size: 24px;
+  color: var(--secondary-lightest-color);
+  margin: 10px 0px 40px;
+}
+
+section.project-section main div.other-projects div.project-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section.project-section
+  main
+  div.other-projects
+  div.project-container
+  div.project-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 1 300px;
+  background-color: var(--bg-light-navy);
+  box-shadow: 0 10px 30px -15px var(--box-shadow-color);
+  border-radius: 5px;
+  padding: 2rem 1.75rem;
+  margin: 0 10px 15px;
+  height: 300px;
+  transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+section.project-section
+  main
+  div.other-projects
+  div.project-container
+  div.project-banner:hover {
+  transform: scale(0.9);
+}
+
+section.project-section
+  main
+  div.other-projects
+  div.project-container
+  div.project-banner
+  div.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.project-section
+  main
+  div.other-projects
+  div.project-container
+  div.project-banner
+  div.header
+  span.folder-icon {
+  font-size: 40px;
+  color: var(--primary-color);
+}
+
+section.project-section
+  main
+  div.other-projects
+  div.project-container
+  div.project-banner
+  div.header
+  div.link-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+section.project-section
+  main
+  div.other-projects
+  div.project-container
+  div.project-banner
+  div.header
+  div.link-wrapper
+  a {
+  font-size: 20px;
+  color: var(--secondary-dark-color);
+  text-decoration: none;
+}
+
+section.project-section
+  main
+  div.other-projects
+  div.project-container
+  div.project-banner
+  div.header
+  div.link-wrapper
+  a
+  > span {
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+section.project-section
+  main
+  div.other-projects
+  div.project-container
+  div.project-banner
+  div.header
+  div.link-wrapper
+  a:hover {
+  color: var(--secondary-lightest-color);
+}
+
+section.project-section
+  main
+  div.other-projects
+  div.project-container
+  div.project-banner
+  div.body
+  h2 {
+  font-size: 26px;
+  color: var(--secondary-lightest-color);
+}
+
+section.project-section
+  main
+  div.other-projects
+  div.project-container
+  div.project-banner:hover
+  div.body
+  h2 {
+  color: var(--primary-color);
+}
+
+section.project-section
+  main
+  div.other-projects
+  div.project-container
+  div.project-banner
+  div.body
+  p {
+  font-size: 16px;
+  color: var(--secondary-color);
+}
+
+section.project-section
+  main
+  div.other-projects
+  div.project-container
+  div.project-banner
+  div.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+
+section.project-section
+  main
+  div.other-projects
+  div.project-container
+  div.project-banner
+  div.footer
+  > div {
+  margin: 0 10px;
+  color: var(--secondary-color);
+  font-family: "Courier New", Courier, monospace;
+}

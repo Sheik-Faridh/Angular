@@ -1,0 +1,48 @@
+section.connect-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+section.connect-section main {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+
+section.connect-section main > h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  color: var(--secondary-light-color);
+  margin: 10px 0px 40px;
+}
+
+section.connect-section main > h2 i {
+  margin: 0 10px;
+  color: var(--primary-color);
+}
+
+section.connect-section main h1 {
+  color: var(--secondary-light-color);
+  font-size: 38px;
+}
+
+section.connect-section main p {
+  font-size: 18px;
+  color: var(--secondary-light-color);
+  margin: 40px auto;
+  width: 58%;
+  line-height: 1.5;
+}
+
+section.connect-section main button {
+  font-size: 24px;
+  padding: 16px 24px;
+  height: 48px;
+}

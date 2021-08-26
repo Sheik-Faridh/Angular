@@ -1,0 +1,76 @@
+<section id="projects" class="project-section">
+  <main>
+    <h2><i class="bi bi-bookshelf"></i>Projects</h2>
+    <div class="main-projects">
+      <div
+        *ngFor="let mainProject of mainProjects; let odd = odd"
+        [ngClass]="{ 'feature-project': true, odd: odd }"
+      >
+        <div class="img-wrapper">
+          <div class="mask-layer"></div>
+          <img
+            [src]="'../../../assets/img/' + mainProject.img_name"
+            [alt]="mainProject.img_name"
+          />
+        </div>
+        <div class="data-container">
+          <h2 class="project-name">
+            <div class="logo-wrapper">
+              <img
+                [src]="'../../../assets/img/' + mainProject.logo"
+                [alt]="mainProject.logo"
+              />
+            </div>
+            <a [href]="mainProject.link" target="_blank" rel="noreferrer">{{
+              mainProject.name
+            }}</a>
+          </h2>
+          <div class="description">{{ mainProject.description }}</div>
+          <ul class="technology">
+            <li *ngFor="let tech of mainProject.stack">{{ tech }}</li>
+          </ul>
+          <div class="project-link" *ngIf="mainProject.link !== null">
+            <a [href]="mainProject.link" target="_blank" rel="noreferrer">
+              <span class="material-icons">launch</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="other-projects">
+      <h2>Other Projects</h2>
+      <div class="project-container">
+        <div *ngFor="let otherProject of otherProjects" class="project-banner">
+          <div class="header">
+            <span class="material-icons-outlined folder-icon">folder</span>
+            <div class="link-wrapper">
+              <a
+                *ngIf="otherProject.github !== null"
+                [href]="otherProject.github"
+                target="_blank"
+                rel="noreferrer"
+                ><i class="bi bi-github"></i
+              ></a>
+              <a
+                *ngIf="otherProject.link !== null"
+                [href]="otherProject.link"
+                target="_blank"
+                rel="noreferrer"
+                ><span class="material-icons">launch</span></a
+              >
+            </div>
+          </div>
+          <div class="body">
+            <h2>{{ otherProject.name }}</h2>
+            <p>{{ otherProject.description }}</p>
+          </div>
+          <div class="footer">
+            <div *ngFor="let tech of otherProject.stack" class="technology">
+              {{ tech }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>

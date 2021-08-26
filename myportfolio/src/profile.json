@@ -67,7 +67,7 @@
         "Designed and developed the application with the new technologies",
         "Collaborated with the mentor to develop an application for internal organization purpose",
         "Research and execute the new concepts in the development",
-        "Designed the application with responsive design"
+        "Designed the application with responsiveness"
       ]
     },
     {
@@ -97,5 +97,164 @@
         "Coordinate with the backend team for API integration in client side"
       ]
     }
-  ]
+  ],
+  "projects": {
+    "mainProjects": [
+      {
+        "img_name": "code_editor_screen.png",
+        "logo": "code_editor_logo.png",
+        "description": "This app is used as an interview and screening tool to let the interviewee write down the programs that run. The application consists of rich features like collaborative editing, no login required for interviewee, and code playback options.",
+        "name": "Code Editor",
+        "stack": [
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Ant Design",
+          "CodeMirror",
+          "Judge0 API",
+          "YJS",
+          "NestJS",
+          "Prisma",
+          "PostgreSQL",
+          "Heroku"
+        ],
+        "link": null
+      },
+      {
+        "img_name": "whatsapp_integration_screen.png",
+        "logo": "whatsapp_logo.png",
+        "description": "This app for Freshdesk enables you to convert your one-on-one conversations including images or GIFs on WhatsApp to tickets and handles them from your Freshdesk helpdesk with ease",
+        "name": "WhatsApp Integration",
+        "stack": [
+          "Freshworks SDK",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Smooch API",
+          "jQuery",
+          "Serverless Function",
+          "Node.js"
+        ],
+        "link": "https://www.freshworks.com/apps/freshdesk/whatsapp_early_access"
+      },
+      {
+        "img_name": "intune_integration_screen.png",
+        "logo": "intune_logo.png",
+        "description": "This app lets organizations sync their mobile and computer devices managed by Intune into Freshservice asset management. This allows organizations to view health information of all their devices in Freshservice. This provides agents the information they need to perform their service desk operations efficiently.",
+        "name": "Intune Integration",
+        "stack": [
+          "Freshworks SDK",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "jQuery",
+          "Serverless Functions",
+          "Intune API",
+          "Node.js"
+        ],
+        "link": "https://www.freshworks.com/apps/freshservice/intune"
+      },
+      {
+        "img_name": "vsts_integration_screen.png",
+        "logo": "vsts_logo.png",
+        "description": "This app helps you to create workitem from Freshservice ticket into VSTS for easier tracking. This app can link an existing Freshservice ticket to one work item in Azure DevOps (VSTS).",
+        "name": "VSTS Integration",
+        "stack": [
+          "Freshworks SDK",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "jQuery",
+          "Crayons UI",
+          "VSTS API",
+          "Serverless Functions",
+          "Node.js"
+        ],
+        "link": "https://www.freshworks.com/apps/freshservice/vsts"
+      }
+    ],
+    "otherProjects": [
+      {
+        "name": "Asana Integration",
+        "link": "https://www.freshworks.com/apps/freshdesk/asana",
+        "github": null,
+        "description": "This app helps you create a task from a Freshdesk ticket into Asana for easier tracking and follow-up",
+        "stack": [
+          "Freshworks API",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Asana API",
+          "JQuery"
+        ]
+      },
+      {
+        "name": "Dynamics CRM",
+        "link": "https://www.freshworks.com/apps/freshdesk/dynamics_crm",
+        "github": null,
+        "description": "This app gets you the key details about your customers inside your Freshdesk app",
+        "stack": [
+          "Freshworks API",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Dynamics CRM API",
+          "JQuery"
+        ]
+      },
+      {
+        "name": "My Portfolio",
+        "link": null,
+        "github": "https://github.com/Sheik-Faridh/Angular/tree/main/myportfolio",
+        "description": "Personal Portfolio in Angular. This is my first Angular app",
+        "stack": ["Angular"]
+      },
+      {
+        "name": "File Manager",
+        "link": "https://file-manager-321.web.app/",
+        "github": "https://github.com/Sheik-Faridh/React/tree/staging/file_manager",
+        "description": "This app is the simple file manager that represents a JSON tree structure as a file system of files and folders.",
+        "stack": ["React", "Ant Design", "Redux", "Firebase"]
+      },
+      {
+        "name": "Space Portal Clone",
+        "link": "https://space-2e9e7.web.app/",
+        "github": "https://github.com/Sheik-Faridh/React/tree/staging/react_space",
+        "description": "Employee Dashboard built using React and Redux",
+        "stack": [
+          "React",
+          "Ant Design",
+          "Redux",
+          "Formik",
+          "SASS",
+          "Tailwind CSS",
+          "Redux Thunk",
+          "Firebase"
+        ]
+      },
+      {
+        "name": "React Custom Hooks",
+        "link": "https://react-express-serve.herokuapp.com/",
+        "github": "https://github.com/Sheik-Faridh/React/tree/staging/react_custom_hooks",
+        "description": "My Custom React Hooks website",
+        "stack": ["React", "Ant Design", "TypeScript", "Formik", "Heroku"]
+      },
+      {
+        "name": "File Conversion",
+        "link": "https://file-conversion.herokuapp.com/",
+        "github": null,
+        "description": "This app is used to convert the file formats between Excel, CSV and JSON",
+        "stack": [
+          "React",
+          "Material UI",
+          "Lerna",
+          "Zustand",
+          "Emotion",
+          "TypeScript",
+          "Express",
+          "Heroku"
+        ]
+      }
+    ]
+  }
 }

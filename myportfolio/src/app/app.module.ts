@@ -9,6 +9,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { SocialComponent } from './components/social/social.component';
 import { ExperienceComponent } from './components/experience/experience.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ConnectComponent } from './components/connect/connect.component';
 
 @NgModule({
   imports: [
@@ -24,6 +26,8 @@ import { ExperienceComponent } from './components/experience/experience.componen
     AboutComponent,
     SocialComponent,
     ExperienceComponent,
+    ProjectsComponent,
+    ConnectComponent,
   ],
   bootstrap: [AppComponent],
 })
