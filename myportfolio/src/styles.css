@@ -1,0 +1,87 @@
+/* Add application styles & imports to this file! */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+:root {
+  --bg-navy: #0a192f;
+  --bg-dark-navy: #020c1b;
+  --bg-light-navy: #112240;
+  --primary-color: #64ffda;
+  --secondary-color: #8892b0;
+  --secondary-light-color: #a8b2d1;
+  --secondary-lightest-color: #ccd6f6;
+  --secondary-dark-color: #495670;
+  --box-shadow-color: rgba(2, 12, 27, 0.7);
+  --bg-tooltip: #003a69;
+  --white: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Neutraface Book", "-apple-system", BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+  background-color: var(--bg-navy);
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-dark-color);
+  border: 3px solid var(--bg-navy);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--bg-navy);
+}
+
+button {
+  font-size: 14px;
+  line-height: 14px;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0px;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.2s linear 0s;
+  letter-spacing: 0.3px;
+  font-weight: 500;
+  min-width: 90px;
+  height: 32px;
+}
+
+button.primary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+button.primary:hover {
+  background: #82f1c221;
+}
+
+section.portfolio-section {
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  padding-top: 80px;
+}
+
+::selection {
+  background-color: var(--bg-light-navy);
+  color: var(--secondary-lightest-color);
+}

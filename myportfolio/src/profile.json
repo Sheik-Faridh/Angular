@@ -1,0 +1,101 @@
+{
+  "intro": {
+    "name": "Sheik Faridh",
+    "nick_name": "sheik ibnu nousadh",
+    "short_description": "I like bringing ideas to life with web technologies",
+    "description": "I'm a software engineer specializing in building the software that makes the difference in the people's lives. Working with my hands to make some magic happen on the internet. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time."
+  },
+  "social": {
+    "email": "faridh.nousadh@gmail.com",
+    "list": [
+      {
+        "name": "Github",
+        "className": "bi bi-github",
+        "link": "https://github.com/Sheik-Faridh"
+      },
+      {
+        "name": "Linkedin",
+        "className": "bi bi-linkedin",
+        "link": "https://www.linkedin.com/in/sheik-faridh-5694a7137"
+      },
+      {
+        "name": "Gmail",
+        "className": "bi bi-envelope",
+        "link": "https://mail.google.com/mail/?view=cm&fs=1&to=faridh.nousadh@gmail.com"
+      }
+    ]
+  },
+  "about_me": {
+    "technology": [
+      "html5",
+      "css3",
+      "javascript",
+      "jquery",
+      "typescript",
+      "angular",
+      "react",
+      "redux",
+      "tailwindcss",
+      "bootstrap",
+      "material-ui",
+      "ant-design",
+      "sass",
+      "nodejs",
+      "express",
+      "nestjs",
+      "mongodb",
+      "postgresql",
+      "prisma",
+      "aws-s3",
+      "aws-ses",
+      "aws-sns",
+      "aws-sqs",
+      "git",
+      "firebase",
+      "heroku",
+      "postman"
+    ]
+  },
+  "experience": [
+    {
+      "company": "QBurst",
+      "link": "https://www.qburst.com/",
+      "designation": "Software Engineer",
+      "joinedAt": "May 2021",
+      "endedAt": null,
+      "roles": [
+        "Designed and developed the application with the new technologies",
+        "Collaborated with the mentor to develop an application for internal organization purpose",
+        "Research and execute the new concepts in the development",
+        "Designed the application with responsive design"
+      ]
+    },
+    {
+      "company": "SPS",
+      "link": "https://www.spi-global.com/",
+      "designation": "G1: Programmer",
+      "joinedAt": "Sep 2020",
+      "endedAt": "May 2021",
+      "roles": [
+        "Woked with a team of ten members to build a different file editors interface using React",
+        "Refactored the React application from class component to functional component",
+        "Developed an application to replace the paid library with an open source library",
+        "Undertake the broad research by assessing the feasiblity of developments"
+      ]
+    },
+    {
+      "company": "Techaffinity",
+      "link": "https://www.techaffinity.com/",
+      "designation": "Junior Software Engineer",
+      "joinedAt": "Dec 2018",
+      "endedAt": "Aug 2020",
+      "roles": [
+        "Freshworks certified marketplace app developer",
+        "Developed frontend and serverless application for Freshworks marketplace platform",
+        "Designed and developed the custom web application for Freshworks customers",
+        "Integrate third party application with the Freshworks product",
+        "Coordinate with the backend team for API integration in client side"
+      ]
+    }
+  ]
+}

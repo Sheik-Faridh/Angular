@@ -1,0 +1,167 @@
+section.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+section.about-section main {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+section.about-section main h2 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 10px 0px 40px;
+  width: 100%;
+  color: var(--secondary-light-color);
+}
+
+section.about-section main h2 i {
+  margin: 0 10px;
+  color: var(--primary-color);
+}
+
+section.about-section main h2::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--secondary-color);
+}
+
+section.about-section main div.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 50px;
+}
+
+section.about-section
+  main
+  div.grid-container
+  div.about-me-container
+  div.summary-wrapper {
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--secondary-color);
+  margin-right: 10px;
+}
+
+section.about-section
+  main
+  div.grid-container
+  div.about-me-container
+  div.summary-wrapper
+  a {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  position: relative;
+  color: var(--primary-color);
+}
+
+section.about-section
+  main
+  div.grid-container
+  div.about-me-container
+  div.summary-wrapper
+  p.summary
+  a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: relative;
+  bottom: 0;
+  background-color: var(--primary-color);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: 0.5;
+}
+
+section.about-section
+  main
+  div.grid-container
+  div.about-me-container
+  div.summary-wrapper
+  p.summary
+  a:hover::after,
+section.about-section
+  main
+  div.grid-container
+  div.about-me-container
+  div.summary-wrapper
+  p.summary
+  a:focus::after {
+  width: 100%;
+}
+
+section.about-section
+  main
+  div.grid-container
+  div.about-me-container
+  div.summary-wrapper
+  p:first-child {
+  margin-bottom: 20px;
+}
+
+section.about-section main div.grid-container div.image-wrapper {
+  width: 350px;
+  height: 300px;
+  text-align: center;
+}
+
+section.about-section main div.grid-container div.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  transition: 1s all;
+}
+
+section.about-section main div.grid-container div.image-wrapper img:hover {
+  transform: scale(1.1);
+}
+
+section.about-section main div.technology-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: var(--bg-light-navy);
+  padding: 30px 10px;
+  margin-top: 25px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+section.about-section main div.technology-container > div {
+  border-radius: 5px;
+  background-color: var(--secondary-lightest-color);
+  margin: 8px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  transition: 1s all;
+}
+
+section.about-section main div.technology-container > div:hover {
+  transform: scale(0.9);
+}
+
+section.about-section main div.technology-container img {
+  width: 70px;
+  height: 70px;
+}
+
+section.about-section main div.technology-container span {
+  display: block;
+  color: #002540;
+  font-weight: 500;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 4px;
+}

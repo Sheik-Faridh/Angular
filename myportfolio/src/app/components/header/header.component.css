@@ -1,0 +1,57 @@
+header.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 100px);
+  height: 70px;
+  padding: 0 50px;
+  position: fixed;
+  top: 0;
+  background-color: transparent;
+  user-select: none;
+  backdrop-filter: blur(5px);
+  z-index: 10;
+}
+
+header.app-header.shadowBox {
+  box-shadow: 0 10px 30px -10px var(--box-shadow-color);
+  background-color: rgba(10, 25, 47, 0.85);
+}
+
+header.app-header div.app-logo img {
+  width: 70px;
+  height: 70px;
+}
+
+header.app-header div.menu-container {
+  display: flex;
+  align-items: center;
+}
+
+header.app-header div.btn-wrapper {
+  margin: 0 10px;
+}
+
+header.app-header ul.menu {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+header.app-header ul.menu li {
+  margin: 0 5px;
+}
+
+header.app-header ul.menu a {
+  padding: 0 10px;
+  text-decoration: none;
+  color: var(--secondary-light-color);
+}
+
+header.app-header ul.menu a i {
+  margin: 0 5px;
+}
+
+header.app-header ul.menu a:hover {
+  color: var(--primary-color);
+}

@@ -1,0 +1,226 @@
+section.experience-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+section.experience-section main {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+section.experience-section main > h2 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  color: var(--secondary-light-color);
+  margin: 10px 0px 40px;
+}
+
+section.experience-section main > h2 i {
+  margin: 0 10px;
+  color: var(--primary-color);
+}
+
+section.experience-section main > h2::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--secondary-color);
+}
+
+section.experience-section main div.experience-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+section.experience-section main div.experience-wrapper div.border-marker {
+  padding: 10px;
+  margin-left: 10px;
+}
+
+section.experience-section
+  main
+  div.experience-wrapper
+  div.border-marker:active {
+  outline: 2px dashed var(--primary-color);
+  outline-offset: 3px;
+}
+
+section.experience-section main div.experience-wrapper div.experience-list {
+  position: relative;
+}
+
+section.experience-section
+  main
+  div.experience-wrapper
+  div.experience-list
+  button {
+  display: block;
+  width: 100%;
+  padding: 0 20px 2px;
+  color: var(--secondary-light-color);
+  border: none;
+  border-radius: 0;
+  border-left: 2px solid var(--secondary-dark-color);
+  outline: none;
+  font-size: 13px;
+  background: transparent;
+  text-align: left;
+  height: 42px;
+  line-height: 42px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+section.experience-section
+  main
+  div.experience-wrapper
+  div.experience-list
+  button:hover,
+section.experience-section
+  main
+  div.experience-wrapper
+  div.experience-list
+  button[aria-selected="true"] {
+  background: var(--bg-light-navy);
+  color: var(--primary-color);
+}
+
+section.experience-section
+  main
+  div.experience-wrapper
+  div.experience-list
+  div.active-line {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 2px;
+  height: 42px;
+  border-radius: 0;
+  background: var(--primary-color);
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+
+section.experience-section main div.experience-wrapper div.work-details {
+  margin-left: 10px;
+}
+
+section.experience-section
+  main
+  div.experience-wrapper
+  div.work-details
+  div.company-details
+  h3 {
+  color: var(--secondary-lightest-color);
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+section.experience-section
+  main
+  div.experience-wrapper
+  div.work-details
+  div.company-details
+  h3
+  span {
+  color: var(--primary-color);
+  margin: 0 2px;
+  font-size: 18px;
+}
+
+section.experience-section
+  main
+  div.experience-wrapper
+  div.work-details
+  div.company-details
+  h3
+  span
+  a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  margin: 0 2px;
+}
+
+section.experience-section
+  main
+  div.experience-wrapper
+  div.work-details
+  div.company-details
+  h3
+  span
+  a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: relative;
+  bottom: 0;
+  background-color: var(--primary-color);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: 0.5;
+}
+
+section.experience-section
+  main
+  div.experience-wrapper
+  div.work-details
+  div.company-details
+  h3
+  span
+  a:hover::after,
+section.experience-section
+  main
+  div.experience-wrapper
+  div.work-details
+  div.company-details
+  h3
+  span
+  a:focus::after {
+  width: 100%;
+}
+
+section.experience-section
+  main
+  div.experience-wrapper
+  div.work-details
+  div.company-details
+  div.duration {
+  color: var(--secondary-dark-color);
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+section.experience-section main div.experience-wrapper div.work-details ul {
+  margin-top: 25px;
+  color: var(--secondary-color);
+  font-size: 16px;
+  list-style: none;
+  font-family: var(--font-sans);
+}
+
+section.experience-section main div.experience-wrapper div.work-details ul li {
+  margin-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+}
+
+section.experience-section
+  main
+  div.experience-wrapper
+  div.work-details
+  ul
+  li::before {
+  content: "▹";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--primary-color);
+}

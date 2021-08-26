@@ -1,0 +1,64 @@
+<section id="about" class="about-section portfolio-section">
+  <main>
+    <h2><i class="bi bi-person"></i>About Me</h2>
+    <div class="grid-container">
+      <div class="about-me-container">
+        <div class="summary-wrapper">
+          <p class="summary">
+            Hey, I'm a full stack javascript developer based in Chennai who
+            loves programming, travelling and cooking. I love creating new
+            things that live on the internet. My interest in web development
+            started back in 2018 when I was decided to learn Java and C#. These
+            programming skills got me an opportunity for JavaScript and then I
+            have started to learn the basic fundamentals of web developement -
+            HTML, CSS and JavaScript. This was really fun and more challenging
+            have grabbed me more interest towards web development.
+          </p>
+          <p class="summary">
+            Fast-forward to today, and I've had the privilege of working at
+            <a
+              href="https://www.techaffinity.com/"
+              target="_blank"
+              rel="noreferrer"
+              >a start-up</a
+            >,
+            <a
+              href="https://www.spi-global.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              an internal software team in KPO</a
+            >, and
+            <a href="https://www.qburst.com/" target="_blank" rel="noreferrer"
+              >a service provider</a
+            >. My main focus on these days are building the clean interface with
+            the latest trends and developing the software that increases the
+            user productivity at
+            <a href="https://www.qburst.com/" target="_blank" rel="noreferrer"
+              >QBurst</a
+            >.
+          </p>
+        </div>
+      </div>
+      <div class="image-wrapper">
+        <picture>
+          <img src="../../../assets/img/profile_pic.jpg" alt="Profile Pic" />
+        </picture>
+      </div>
+    </div>
+    <div class="technology-container">
+      <div
+        *ngFor="let technology of technologies"
+        [matTooltip]="technology.toUpperCase()"
+        matTooltipClass="social-tooltip"
+        matTooltipPosition="right"
+      >
+        <img
+          [src]="'../../../assets/svg/' + technology + '.svg'"
+          [alt]="technology"
+        />
+        <span>{{ technology.toUpperCase() }}</span>
+      </div>
+    </div>
+  </main>
+</section>

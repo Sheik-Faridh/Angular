@@ -1,0 +1,25 @@
+<section class="home-section portfolio-section">
+  <main>
+    <div>
+      <h5 class="welcome-text">Hi, my name is</h5>
+    </div>
+    <div>
+      <h1 class="user-name">{{ intro.name }}</h1>
+      <span class="nick-name">{{ intro.nick_name }}</span>
+    </div>
+    <div>
+      <h2 class="short-description">{{ intro.short_description }}</h2>
+    </div>
+    <div>
+      <p class="description">{{ intro.description }}</p>
+    </div>
+    <div class="connect-container">
+      <button class="primary">
+        <a [href]="'mailto:' + email">Let's talk</a>
+      </button>
+    </div>
+    <div>
+      <img src="../../../assets/svg/home.svg" />
+    </div>
+  </main>
+</section>

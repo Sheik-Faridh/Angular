@@ -1,0 +1,81 @@
+section.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 100px;
+}
+
+section.home-section main {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+section.home-section main > div:not(:first-child) {
+  margin: 10px;
+}
+
+section.home-section main > div:first-child {
+  margin: 0 10px 10px 10px;
+}
+
+section.home-section main h5.welcome-text {
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
+section.home-section main h1.user-name {
+  display: inline-block;
+  font-size: 60px;
+  color: var(--secondary-lightest-color);
+}
+
+section.home-section main h1.user-name + span.nick-name {
+  position: relative;
+  bottom: 7px;
+  color: var(--primary-color);
+  font-weight: 500;
+  z-index: -1;
+  font-size: 32px;
+  margin: 0 16px;
+  font-family: "Allison", cursive;
+  background-color: var(--bg-light-navy);
+  padding: 0px 8px;
+  border-radius: 5px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 15px 25px, rgb(0 0 0 / 5%) 0px 5px 10px;
+}
+
+section.home-section main h1.user-name::after {
+  content: "@";
+  font-size: 24px;
+  margin-left: 16px;
+  color: var(--secondary-color);
+}
+
+section.home-section main h2.short-description {
+  font-size: 50px;
+  color: var(--secondary-color);
+  line-height: 1;
+}
+
+section.home-section main p.description {
+  width: 70%;
+  font-size: 18px;
+  color: var(--secondary-dark-color);
+  line-height: 1.6;
+}
+
+section.home-section main div.connect-container {
+  margin-top: 40px;
+}
+
+section.home-section main div.connect-container button.primary {
+  padding: 8px 16px;
+  height: 40px;
+  font-size: 16px;
+}
+
+section.home-section main div.connect-container button.primary > a {
+  color: var(--primary-color);
+  text-decoration: none;
+}

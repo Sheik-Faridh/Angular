@@ -1,0 +1,15 @@
+<aside class='social-container'>
+  <ul class='social-wrapper'>
+    <li *ngFor='let social of socialList' aria-hiden='true' [matTooltip]='social.name' matTooltipClass='social-tooltip'
+      matTooltipPosition='right'>
+      <a [href]='social.link' target='_blank' rel='noreferrer'>
+        <i [class]='social.className'></i>
+      </a>
+    </li>
+  </ul>
+</aside>
+<aside class='email-container'>
+  <div>
+    <a [href]='"mailto:"+email'>{{ email }}</a>
+  </div>
+</aside>
