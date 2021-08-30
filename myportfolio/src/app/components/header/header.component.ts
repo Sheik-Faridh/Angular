@@ -31,9 +31,9 @@ export class HeaderComponent implements OnInit {
       className: 'bi bi-person',
     },
     {
-      href: '/#experience',
-      name: 'Experience',
-      className: 'bi bi-briefcase',
+      href: '/#career',
+      name: 'Career',
+      className: 'bi bi-graph-up',
     },
     {
       href: '/#projects',

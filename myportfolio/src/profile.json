@@ -56,6 +56,14 @@
       "postman"
     ]
   },
+  "educations": [
+    {
+      "name": "Bachelor of Engineering",
+      "college": "Kumaraguru College of Technology",
+      "marks": "83.5%",
+      "duration": "2014 - 2018"
+    }
+  ],
   "experience": [
     {
       "company": "QBurst",
@@ -96,6 +104,28 @@
         "Integrate third party application with the Freshworks product",
         "Coordinate with the backend team for API integration in client-side"
       ]
+    }
+  ],
+  "achievements": [
+    {
+      "name": "District Rank Holder",
+      "link": null,
+      "description": "Awarded as District Rank Holder in BCM community by district collector for scoring more marks in the higher secondary examination"
+    },
+    {
+      "name": "Mahatma Gandhi Scholarship",
+      "link": null,
+      "description": "Recipient of Mahatma Gandhi Scholarship for three years (2014 - 2018)"
+    },
+    {
+      "name": "Best Project Model",
+      "link": null,
+      "description": "Won Best Project Model of Civil Engineering in the TamilNadu State Council for Science and Technology in 2017"
+    },
+    {
+      "name": "Top Contributor",
+      "link": "https://community.developers.freshworks.com/t/meet-the-community-champions-q3-2020/1467",
+      "description": "Awarded as one of the Top Contributor by the Freshworks Community Forum for contributing ideas and solutionsfor the community on 2020"
     }
   ],
   "projects": {

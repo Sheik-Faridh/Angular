@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import profileJSON from '../../../profile.json';
-import { IExperience } from './experience.interface';
+import { IEducation, IExperience, IAchievement } from './career.interface';
 
 @Component({
-  selector: 'app-experience',
-  templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.css'],
+  selector: 'app-career',
+  templateUrl: './career.component.html',
+  styleUrls: ['./career.component.css'],
 })
-export class ExperienceComponent implements OnInit {
+export class CareerComponent implements OnInit {
+  educations: IEducation[] = profileJSON.educations;
   workExperiences: IExperience[] = profileJSON.experience;
+  achievements: IAchievement[] = profileJSON.achievements;
   activeExperience: string = this.workExperiences[0].company;
   activeIndex: number = 0;
 

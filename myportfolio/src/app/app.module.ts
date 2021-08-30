@@ -8,7 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { SocialComponent } from './components/social/social.component';
-import { ExperienceComponent } from './components/experience/experience.component';
+import { CareerComponent } from './components/career/career.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ConnectComponent } from './components/connect/connect.component';
 import { LoaderComponent } from './components/loader/loader.component';
@@ -26,7 +26,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     HomeComponent,
     AboutComponent,
     SocialComponent,
-    ExperienceComponent,
+    CareerComponent,
     ProjectsComponent,
     ConnectComponent,
     LoaderComponent,
