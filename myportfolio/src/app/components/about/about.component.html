@@ -1,18 +1,18 @@
 <section id="about" class="about-section portfolio-section">
   <main>
-    <h2><i class="bi bi-person"></i>About Me</h2>
+    <h2 @fadeIn><i class="bi bi-person"></i>About Me</h2>
     <div class="grid-container">
       <div class="about-me-container">
-        <div class="summary-wrapper">
+        <div class="summary-wrapper" @fadeIn>
           <p class="summary">
-            Hey, I'm a full stack javascript developer based in Chennai who
-            loves programming, travelling and cooking. I love creating new
+            Hey, I'm a full-stack javascript developer based in Chennai who
+            loves programming, traveling, and cooking. I love creating new
             things that live on the internet. My interest in web development
             started back in 2018 when I was decided to learn Java and C#. These
             programming skills got me an opportunity for JavaScript and then I
-            have started to learn the basic fundamentals of web developement -
-            HTML, CSS and JavaScript. This was really fun and more challenging
-            have grabbed me more interest towards web development.
+            have started to learn the basic fundamentals of web development -
+            HTML, CSS, and JavaScript. This was really fun and more challenging
+            that grabbed me more interest in web development.
           </p>
           <p class="summary">
             Fast-forward to today, and I've had the privilege of working at
@@ -31,16 +31,16 @@
             >, and
             <a href="https://www.qburst.com/" target="_blank" rel="noreferrer"
               >a service provider</a
-            >. My main focus on these days are building the clean interface with
-            the latest trends and developing the software that increases the
-            user productivity at
+            >. My main focus these days is building a clean interface with the
+            latest trends and developing the software that increases user
+            productivity at
             <a href="https://www.qburst.com/" target="_blank" rel="noreferrer"
               >QBurst</a
             >.
           </p>
         </div>
       </div>
-      <div class="image-wrapper">
+      <div class="image-wrapper" @fadeIn>
         <picture>
           <img src="../../../assets/img/profile_pic.jpg" alt="Profile Pic" />
         </picture>
@@ -52,6 +52,7 @@
         [matTooltip]="technology.toUpperCase()"
         matTooltipClass="social-tooltip"
         matTooltipPosition="right"
+        @fadeIn
       >
         <img
           [src]="'../../../assets/svg/' + technology + '.svg'"

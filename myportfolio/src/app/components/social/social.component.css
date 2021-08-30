@@ -52,7 +52,7 @@ aside.email-container {
 
 aside.email-container > div > a {
   writing-mode: vertical-lr;
-  text-orientation: upright;
+  text-orientation: inherit;
   color: var(--secondary-light-color);
   font-size: 14px;
   letter-spacing: 0.1em;

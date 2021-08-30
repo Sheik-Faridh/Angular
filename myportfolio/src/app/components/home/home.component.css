@@ -2,7 +2,7 @@ section.home-section {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 section.home-section main {
@@ -26,7 +26,9 @@ section.home-section main h5.welcome-text {
 
 section.home-section main h1.user-name {
   display: inline-block;
-  font-size: 60px;
+  font-size: 70px;
+  font-weight: 500;
+  line-height: 1;
   color: var(--secondary-lightest-color);
 }
 
@@ -53,7 +55,7 @@ section.home-section main h1.user-name::after {
 }
 
 section.home-section main h2.short-description {
-  font-size: 50px;
+  font-size: 60px;
   color: var(--secondary-color);
   line-height: 1;
 }
@@ -63,19 +65,4 @@ section.home-section main p.description {
   font-size: 18px;
   color: var(--secondary-dark-color);
   line-height: 1.6;
-}
-
-section.home-section main div.connect-container {
-  margin-top: 40px;
-}
-
-section.home-section main div.connect-container button.primary {
-  padding: 8px 16px;
-  height: 40px;
-  font-size: 16px;
-}
-
-section.home-section main div.connect-container button.primary > a {
-  color: var(--primary-color);
-  text-decoration: none;
 }

@@ -1,24 +1,19 @@
 <section class="home-section portfolio-section">
   <main>
-    <div>
+    <div @fadeIn>
       <h5 class="welcome-text">Hi, my name is</h5>
     </div>
-    <div>
+    <div @fadeIn>
       <h1 class="user-name">{{ intro.name }}</h1>
       <span class="nick-name">{{ intro.nick_name }}</span>
     </div>
-    <div>
+    <div @fadeIn>
       <h2 class="short-description">{{ intro.short_description }}</h2>
     </div>
-    <div>
+    <div @fadeIn>
       <p class="description">{{ intro.description }}</p>
     </div>
-    <div class="connect-container">
-      <button class="primary">
-        <a [href]="'mailto:' + email">Let's talk</a>
-      </button>
-    </div>
-    <div>
+    <div @fadeIn>
       <img src="../../../assets/svg/home.svg" />
     </div>
   </main>

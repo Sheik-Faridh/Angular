@@ -6,10 +6,19 @@ import { IIntro } from './home.interface';
 @Component({
   selector: 'app-home',
   animations: [
-    trigger('insertTrigger', [
-      transition(':enter', [
-        style({ opacity: 0 }),
-        animate('100ms', style({ opacity: 1 })),
+    trigger('fadeIn', [
+      transition('void => *', [
+        style({
+          transform: 'translateY(100px)',
+          opacity: 0,
+        }),
+        animate(
+          '1s',
+          style({
+            transform: 'translateY(0)',
+            opacity: 1,
+          })
+        ),
       ]),
     ]),
   ],
@@ -18,7 +27,6 @@ import { IIntro } from './home.interface';
 })
 export class HomeComponent implements OnInit {
   intro: IIntro = profileJSON.intro;
-  email: string = profileJSON.social.email;
 
   constructor() {}
 

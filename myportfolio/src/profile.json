@@ -64,10 +64,10 @@
       "joinedAt": "May 2021",
       "endedAt": null,
       "roles": [
-        "Designed and developed the application with the new technologies",
-        "Collaborated with the mentor to develop an application for internal organization purpose",
+        "Design and develop the application with the new technologies",
+        "Collaborate with the mentor to develop an application for internal organization purpose",
         "Research and execute the new concepts in the development",
-        "Designed the application with responsiveness"
+        "Design the application with responsiveness"
       ]
     },
     {
@@ -77,10 +77,10 @@
       "joinedAt": "Sep 2020",
       "endedAt": "May 2021",
       "roles": [
-        "Woked with a team of ten members to build a different file editors interface using React",
-        "Refactored the React application from class component to functional component",
-        "Developed an application to replace the paid library with an open source library",
-        "Undertake the broad research by assessing the feasiblity of developments"
+        "Work with a team of ten members to build a different file editors interface using React",
+        "Convert the React application from class component to functional component",
+        "Develop an application to replace the paid library with an open-source library",
+        "Undertake the broad research by assessing the feasibility of developments"
       ]
     },
     {
@@ -91,10 +91,10 @@
       "endedAt": "Aug 2020",
       "roles": [
         "Freshworks certified marketplace app developer",
-        "Developed frontend and serverless application for Freshworks marketplace platform",
-        "Designed and developed the custom web application for Freshworks customers",
+        "Develop frontend and serverless application for Freshworks marketplace platform",
+        "Design and develop the custom web application for Freshworks customers",
         "Integrate third party application with the Freshworks product",
-        "Coordinate with the backend team for API integration in client side"
+        "Coordinate with the backend team for API integration in client-side"
       ]
     }
   ],
@@ -178,7 +178,7 @@
         "name": "Asana Integration",
         "link": "https://www.freshworks.com/apps/freshdesk/asana",
         "github": null,
-        "description": "This app helps you create a task from a Freshdesk ticket into Asana for easier tracking and follow-up",
+        "description": "This app helps you create a task from a Freshdesk ticket into Asana for easier tracking and follow-up.",
         "stack": [
           "Freshworks API",
           "HTML",
@@ -192,7 +192,7 @@
         "name": "Dynamics CRM",
         "link": "https://www.freshworks.com/apps/freshdesk/dynamics_crm",
         "github": null,
-        "description": "This app gets you the key details about your customers inside your Freshdesk app",
+        "description": "This app gets you the key details about your customers inside your Freshdesk app.",
         "stack": [
           "Freshworks API",
           "HTML",
@@ -206,7 +206,7 @@
         "name": "My Portfolio",
         "link": null,
         "github": "https://github.com/Sheik-Faridh/Angular/tree/main/myportfolio",
-        "description": "Personal Portfolio in Angular. This is my first Angular app",
+        "description": "Personal Portfolio in Angular. This is my first Angular app.",
         "stack": ["Angular"]
       },
       {
@@ -220,7 +220,7 @@
         "name": "Space Portal Clone",
         "link": "https://space-2e9e7.web.app/",
         "github": "https://github.com/Sheik-Faridh/React/tree/staging/react_space",
-        "description": "Employee Dashboard built using React and Redux",
+        "description": "Employee Dashboard UI Revamp using React and Redux",
         "stack": [
           "React",
           "Ant Design",
@@ -243,7 +243,7 @@
         "name": "File Conversion",
         "link": "https://file-conversion.herokuapp.com/",
         "github": null,
-        "description": "This app is used to convert the file formats between Excel, CSV and JSON",
+        "description": "This app is used to convert the file formats between Excel, CSV, and JSON.",
         "stack": [
           "React",
           "Material UI",

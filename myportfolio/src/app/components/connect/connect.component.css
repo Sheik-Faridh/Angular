@@ -4,6 +4,7 @@ section.connect-section {
   align-items: center;
   min-width: 100vw;
   min-height: 100vh;
+  position: relative;
 }
 
 section.connect-section main {
@@ -34,8 +35,8 @@ section.connect-section main h1 {
 }
 
 section.connect-section main p {
-  font-size: 18px;
-  color: var(--secondary-light-color);
+  font-size: 17px;
+  color: var(--secondary-color);
   margin: 40px auto;
   width: 58%;
   line-height: 1.5;
@@ -45,4 +46,27 @@ section.connect-section main button {
   font-size: 24px;
   padding: 16px 24px;
   height: 48px;
+}
+
+section.connect-section main button > a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+section.connect-section footer {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--secondary-color);
+  font-family: "Courier New", Courier, monospace;
+}
+
+section.connect-section footer a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+section.connect-section footer a:hover {
+  color: var(--primary-color);
 }

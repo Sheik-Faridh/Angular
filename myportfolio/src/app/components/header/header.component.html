@@ -1,23 +1,15 @@
 <header class="app-header" [class.shadowBox]="scrollTop > 70">
-  <div
-    class="app-logo"
-    [@rotate]="{
-      params: { duration: 700, degrees: 720 }
-    }"
-  >
+  <div class="app-logo" @fadeIn>
     <img src="assets/svg/logo.svg" alt="Portfolio Logo" />
   </div>
   <div class="menu-container">
     <ul class="menu">
-      <li *ngFor="let link of links" (click)="scrollTo(link.name)">
+      <li *ngFor="let link of links" (click)="scrollTo(link.name)" @fadeIn>
         <a [href]="link.href">
           <i [class]="link.className"></i>
           {{ link.name }}
         </a>
       </li>
     </ul>
-    <div class="btn-wrapper">
-      <button class="primary">Resume</button>
-    </div>
   </div>
 </header>

@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { rotateAnimation } from 'angular-animations';
+import { animate, style, transition, trigger } from '@angular/animations';
 import { ILink } from './header.interface';
 
 @Component({
@@ -7,8 +7,19 @@ import { ILink } from './header.interface';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
   animations: [
-    rotateAnimation(),
-    rotateAnimation({ anchor: 'rotate90', degrees: 90 }),
+    trigger('fadeIn', [
+      transition('void => *', [
+        style({
+          transform: 'translateY(-100px)',
+        }),
+        animate(
+          '1s ease-in',
+          style({
+            transform: 'translateY(0)',
+          })
+        ),
+      ]),
+    ]),
   ],
 })
 export class HeaderComponent implements OnInit {
