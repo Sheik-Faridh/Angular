@@ -369,7 +369,7 @@ section.career-section main div.achievement-wrapper div.achievement-details p {
   font-size: 16px;
   line-height: 1.5;
   color: var(--secondary-light-color);
-  transition: 1s all;
+  transition: 2s all;
 }
 
 section.career-section
@@ -385,7 +385,7 @@ section.career-section main a {
   text-decoration: none;
   text-decoration-skip-ink: auto;
   position: relative;
-  color: var(--primary-color);
+  color: inherit;
 }
 
 section.career-section main a::after {
