@@ -1,10 +1,14 @@
-<section id="about" class="about-section portfolio-section">
-  <main>
+<section
+  id="about"
+  class="about-section portfolio-section"
+  (deferLoadAnimation)="renderComponent = true"
+>
+  <main *ngIf="renderComponent">
     <h2 @fadeIn><i class="bi bi-person"></i>About Me</h2>
     <div class="grid-container">
       <div class="about-me-container">
-        <div class="summary-wrapper" @fadeIn>
-          <p class="summary">
+        <div class="summary-wrapper">
+          <p class="summary" @fadeInUp>
             Hey, I'm a full-stack javascript developer based in Chennai who
             loves programming, traveling, and cooking. I love creating new
             things that live on the internet. My interest in web development
@@ -14,7 +18,7 @@
             HTML, CSS, and JavaScript. This was really fun and more challenging
             that grabbed me more interest in web development.
           </p>
-          <p class="summary">
+          <p class="summary" @fadeInUp>
             Fast-forward to today, and I've had the privilege of working at
             <a
               href="https://www.techaffinity.com/"
@@ -40,7 +44,7 @@
           </p>
         </div>
       </div>
-      <div class="image-wrapper" @fadeIn>
+      <div class="image-wrapper" @fadeInUp>
         <picture>
           <img src="../../../assets/img/profile_pic.jpg" alt="Profile Pic" />
         </picture>
@@ -52,7 +56,7 @@
         [matTooltip]="technology.toUpperCase()"
         matTooltipClass="social-tooltip"
         matTooltipPosition="right"
-        @fadeIn
+        @listAnimation
       >
         <img
           [src]="'../../../assets/svg/' + technology + '.svg'"

@@ -1,16 +1,22 @@
-<section id="career" class="career-section">
-  <main>
-    <h2><i class="bi bi-graph-up"></i>Career</h2>
+<section
+  id="career"
+  class="career-section"
+  (deferLoadAnimation)="renderComponent = true"
+>
+  <main *ngIf="renderComponent" @fadeInUp>
+    <h2 @fadeIn><i class="bi bi-graph-up"></i>Career</h2>
     <div class="education-container">
-      <h2 class="title"><i class="bi bi-receipt-cutoff"></i>Education</h2>
-      <div class="education-wrapper wrapper-container">
+      <h2 class="title">
+        <i class="bi bi-receipt-cutoff" @fadeInUp></i>Education
+      </h2>
+      <div class="education-wrapper wrapper-container" @listAnimation>
         <div *ngFor="let education of educations" class="grid-container">
           <div class="icon-wrapper"><i class="bi bi-bank"></i></div>
           <div class="education-details">
-            <h2>
+            <h2 @fadeIn>
               {{ education.name }} <span>{{ education.marks }}</span>
             </h2>
-            <h4>
+            <h4 @fadeIn>
               {{ education.college }}
               <span>{{ education.duration }}</span>
             </h4>
@@ -18,14 +24,15 @@
         </div>
       </div>
     </div>
-    <div class="experience-container">
-      <h2 class="title"><i class="bi bi-briefcase"></i>Experience</h2>
+    <div class="experience-container" @fadeInUp>
+      <h2 class="title" @fadeIn><i class="bi bi-briefcase"></i>Experience</h2>
       <div class="experience-wrapper wrapper-container">
         <div class="experience-list">
           <button
             *ngFor="let experience of workExperiences; index as i"
             [attr.aria-selected]="activeExperience === experience.company"
             (click)="setSelected(experience.company, i)"
+            @listAnimation
           >
             {{ experience.company }}
           </button>
@@ -39,6 +46,7 @@
             <ng-template
               *ngFor="let experience of workExperiences"
               [ngSwitchCase]="experience.company"
+              @listAnimation
             >
               <div class="company-details">
                 <h3>
@@ -69,11 +77,12 @@
       </div>
     </div>
     <div class="achievement-container">
-      <h2 class="title"><i class="bi bi-trophy"></i>Achievements</h2>
+      <h2 class="title" @fadeIn><i class="bi bi-trophy"></i>Achievements</h2>
       <div class="achievement-wrapper">
         <div
           *ngFor="let achievement of achievements"
           class="achievement-details"
+          @listAnimation
         >
           <h2 *ngIf="achievement.link !== null; else elseBlock">
             <a [href]="achievement.link" rel="noreferrer" target="_blank">

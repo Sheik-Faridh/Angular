@@ -1,28 +1,14 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-import { animate, style, transition, trigger } from '@angular/animations';
+import { Component, HostListener } from '@angular/core';
+import { fadeInDownAnimation } from 'src/app/app.animation';
 import { ILink } from './header.interface';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  animations: [
-    trigger('fadeIn', [
-      transition('void => *', [
-        style({
-          transform: 'translateY(-100px)',
-        }),
-        animate(
-          '1s ease-in',
-          style({
-            transform: 'translateY(0)',
-          })
-        ),
-      ]),
-    ]),
-  ],
+  animations: [fadeInDownAnimation],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   scrollTop: number = 0;
   links: ILink[] = [
     {
@@ -48,8 +34,6 @@ export class HeaderComponent implements OnInit {
   ];
 
   constructor() {}
-
-  ngOnInit() {}
 
   @HostListener('window:scroll')
   handleScroll() {

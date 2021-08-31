@@ -12,6 +12,7 @@ import { CareerComponent } from './components/career/career.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ConnectComponent } from './components/connect/connect.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { DeferloadanimationDirective } from './deferloadanimation.directive';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     ProjectsComponent,
     ConnectComponent,
     LoaderComponent,
+    DeferloadanimationDirective,
   ],
   bootstrap: [AppComponent],
 })

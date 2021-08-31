@@ -1,10 +1,15 @@
-<section id="projects" class="project-section">
-  <main>
-    <h2><i class="bi bi-bookshelf"></i>Projects</h2>
-    <div class="main-projects">
+<section
+  id="projects"
+  class="project-section"
+  (deferLoadAnimation)="renderComponent = true"
+>
+  <main *ngIf="renderComponent">
+    <h2 @fadeIn><i class="bi bi-bookshelf"></i>Projects</h2>
+    <div class="main-projects" @fadeInUp>
       <div
         *ngFor="let mainProject of mainProjects; let odd = odd"
         [ngClass]="{ 'feature-project': true, odd: odd }"
+        @listAnimation
       >
         <div class="img-wrapper">
           <div class="mask-layer"></div>
@@ -33,9 +38,11 @@
               <a href="javascript:void(0);">{{ mainProject.name }}</a>
             </ng-template>
           </h2>
-          <div class="description">{{ mainProject.description }}</div>
+          <div class="description" @fadeInUp>{{ mainProject.description }}</div>
           <ul class="technology">
-            <li *ngFor="let tech of mainProject.stack">{{ tech }}</li>
+            <li *ngFor="let tech of mainProject.stack" @listAnimation>
+              {{ tech }}
+            </li>
           </ul>
           <div class="project-link" *ngIf="mainProject.link !== null">
             <a [href]="mainProject.link" target="_blank" rel="noreferrer">
@@ -45,10 +52,14 @@
         </div>
       </div>
     </div>
-    <div class="other-projects">
-      <h2>Other Projects</h2>
+    <div class="other-projects" @fadeInUp>
+      <h2 @fadeIn>Other Projects</h2>
       <div class="project-container">
-        <div *ngFor="let otherProject of otherProjects" class="project-banner">
+        <div
+          *ngFor="let otherProject of otherProjects"
+          class="project-banner"
+          @listAnimation
+        >
           <div class="header">
             <span class="material-icons-outlined folder-icon">folder</span>
             <div class="link-wrapper">

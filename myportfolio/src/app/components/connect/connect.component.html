@@ -1,16 +1,20 @@
-<section id="connect" class="connect-section">
-  <main>
-    <h2><i class="bi bi-envelope"></i>Let's Connect</h2>
-    <h1>Get In Touch</h1>
-    <p>
+<section
+  id="connect"
+  class="connect-section"
+  (deferLoadAnimation)="renderComponent = true"
+>
+  <main *ngIf="renderComponent">
+    <h2 @fadeIn><i class="bi bi-envelope"></i>Let's Connect</h2>
+    <h1 @fadeInUp>Get In Touch</h1>
+    <p @fadeInUp>
       Have a little something, something you wanna talk to me about? Well click
       the below button to send the messages.
     </p>
-    <button class="primary">
+    <button class="primary" @fadeInUp>
       <a [href]="'mailto:' + email">Let's talk</a>
     </button>
   </main>
-  <footer>
+  <footer @fadeInUp>
     Design inspired from
     <a href="https://brittanychiang.com/" target="_blank" rel="noreferrer"
       >Brittany Chiang</a

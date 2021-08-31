@@ -1,5 +1,9 @@
-import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+import {
+  fadeAnimation,
+  fadeInUpAnimation,
+  listAnimation,
+} from 'src/app/app.animation';
 import profileJSON from '../../../profile.json';
 
 @Component({
@@ -7,24 +11,11 @@ import profileJSON from '../../../profile.json';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
   encapsulation: ViewEncapsulation.None,
-  animations: [
-    trigger('fadeIn', [
-      transition('void => *', [
-        style({ opacity: 0 }),
-        animate(
-          '2s ease-in',
-          style({
-            opacity: 1,
-          })
-        ),
-      ]),
-    ]),
-  ],
+  animations: [fadeAnimation, fadeInUpAnimation, listAnimation],
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
   technologies: string[] = profileJSON.about_me.technology;
+  renderComponent: boolean = false;
 
   constructor() {}
-
-  ngOnInit() {}
 }

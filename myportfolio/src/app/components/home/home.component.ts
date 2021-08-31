@@ -1,34 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { trigger, transition, animate, style } from '@angular/animations';
+import { Component } from '@angular/core';
+import { fadeInUpAnimation } from 'src/app/app.animation';
 import profileJSON from '../../../profile.json';
 import { IIntro } from './home.interface';
 
 @Component({
   selector: 'app-home',
-  animations: [
-    trigger('fadeIn', [
-      transition('void => *', [
-        style({
-          transform: 'translateY(100px)',
-          opacity: 0,
-        }),
-        animate(
-          '1s',
-          style({
-            transform: 'translateY(0)',
-            opacity: 1,
-          })
-        ),
-      ]),
-    ]),
-  ],
+  animations: [fadeInUpAnimation],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   intro: IIntro = profileJSON.intro;
 
   constructor() {}
-
-  ngOnInit() {}
 }
