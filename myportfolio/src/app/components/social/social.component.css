@@ -1,6 +1,4 @@
 aside.social-container {
-  display: flex;
-  flex-direction: column;
   position: fixed;
   left: 75px;
   bottom: 0;
@@ -14,16 +12,6 @@ aside.social-container ul.social-wrapper {
 
 aside.social-container ul.social-wrapper li:last-child {
   margin-bottom: 20px;
-}
-
-aside.social-container ul.social-wrapper::after,
-aside.email-container > div::after {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 90px;
-  margin: 0px auto;
-  background-color: var(--secondary-light-color);
 }
 
 aside.social-container ul.social-wrapper li {
@@ -67,4 +55,57 @@ aside.email-container > div > a:hover {
 
 .social-tooltip {
   background-color: var(--bg-tooltip);
+}
+
+@media screen and (max-width: 1000px) {
+  aside.social-container {
+    left: 30px;
+  }
+
+  aside.email-container {
+    right: 30px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  aside.email-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    right: 0;
+    margin-bottom: 10px;
+  }
+
+  aside.email-container > div > a {
+    writing-mode: inherit;
+  }
+
+  aside.social-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    left: 0;
+    margin-bottom: 10px;
+  }
+
+  aside.social-container ul.social-wrapper {
+    flex-direction: row;
+  }
+
+  aside.social-container ul.social-wrapper li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  aside.social-container ul.social-wrapper::after,
+  aside.email-container > div::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: var(--secondary-light-color);
+  }
 }

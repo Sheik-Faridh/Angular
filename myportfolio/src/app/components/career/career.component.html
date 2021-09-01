@@ -1,6 +1,6 @@
 <section
   id="career"
-  class="career-section"
+  class="career-section portfolio-section"
   (deferLoadAnimation)="renderComponent = true"
 >
   <main *ngIf="renderComponent" @fadeInUp>
@@ -46,9 +46,8 @@
             <ng-template
               *ngFor="let experience of workExperiences"
               [ngSwitchCase]="experience.company"
-              @listAnimation
             >
-              <div class="company-details">
+              <div class="company-details" @listAnimation>
                 <h3>
                   {{ experience.designation }}
                   <span

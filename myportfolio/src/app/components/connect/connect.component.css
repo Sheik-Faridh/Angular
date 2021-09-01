@@ -55,6 +55,7 @@ section.connect-section main button > a {
 
 section.connect-section footer {
   position: absolute;
+  padding: 10px;
   bottom: 20px;
   text-align: center;
   font-size: 14px;
@@ -69,4 +70,17 @@ section.connect-section footer a {
 
 section.connect-section footer a:hover {
   color: var(--primary-color);
+}
+
+@media screen and (max-width: 1000px) {
+  section.connect-section > main {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  section.connect-section > main {
+    width: 98%;
+    padding: 20px;
+  }
 }

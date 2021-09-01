@@ -1,3 +1,8 @@
+<aside class="email-container">
+  <div>
+    <a [href]="'mailto:' + email" @bounce>{{ email }}</a>
+  </div>
+</aside>
 <aside class="social-container">
   <ul class="social-wrapper">
     <li
@@ -13,9 +18,4 @@
       </a>
     </li>
   </ul>
-</aside>
-<aside class="email-container">
-  <div>
-    <a [href]="'mailto:' + email" @bounce>{{ email }}</a>
-  </div>
 </aside>

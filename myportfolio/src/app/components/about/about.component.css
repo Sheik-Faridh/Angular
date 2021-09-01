@@ -2,14 +2,13 @@ section.about-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100vw;
-  min-height: 100vh;
 }
 
 section.about-section main {
   display: flex;
   flex-direction: column;
   width: 50%;
+  align-items: center;
 }
 
 section.about-section main h2 {
@@ -110,19 +109,33 @@ section.about-section
   margin-bottom: 20px;
 }
 
-section.about-section main div.grid-container div.image-wrapper {
+section.about-section
+  main
+  div.grid-container
+  div.image-container
+  div.image-wrapper {
   width: 350px;
   height: 300px;
   text-align: center;
 }
 
-section.about-section main div.grid-container div.image-wrapper img {
+section.about-section
+  main
+  div.grid-container
+  div.image-container
+  div.image-wrapper
+  img {
   width: 100%;
   height: 100%;
   transition: 1s all;
 }
 
-section.about-section main div.grid-container div.image-wrapper img:hover {
+section.about-section
+  main
+  div.grid-container
+  div.image-container
+  div.image-wrapper
+  img:hover {
   transform: scale(1.1);
 }
 
@@ -164,4 +177,49 @@ section.about-section main div.technology-container span {
   text-align: center;
   font-size: 12px;
   margin-top: 4px;
+}
+
+@media screen and (max-width: 1280px) {
+  section.portfolio-section > main {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  section.portfolio-section > main {
+    width: 75%;
+  }
+
+  section.about-section
+    main
+    div.grid-container
+    div.image-container
+    div.image-wrapper {
+    width: 300px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  section.portfolio-section > main {
+    width: 98%;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  section.about-section main h2::after {
+    width: 50%;
+  }
+
+  section.about-section main div.grid-container {
+    grid-template-columns: none;
+  }
+
+  section.about-section main div.grid-container div.image-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }

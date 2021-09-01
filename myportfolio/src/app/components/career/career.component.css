@@ -2,9 +2,6 @@ section.career-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100vw;
-  min-height: 100vh;
-  padding-top: 80px;
 }
 
 section.career-section main {
@@ -326,13 +323,14 @@ section.career-section main div.achievement-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 section.career-section main div.achievement-wrapper div.achievement-details {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 0 1 260px;
+  flex: 0 1 250px;
   flex-wrap: wrap;
   height: 180px;
   background: var(--bg-light-navy);
@@ -403,4 +401,33 @@ section.career-section main a::after {
 section.career-section main a:hover::after,
 section.career-section main a:focus::after {
   width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+  section.portfolio-section > main {
+    width: 70%;
+  }
+
+  section.career-section main div.achievement-wrapper {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  section.portfolio-section > main {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  section.portfolio-section > main {
+    width: 98%;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  section.career-section main h2::after {
+    width: 50%;
+  }
 }

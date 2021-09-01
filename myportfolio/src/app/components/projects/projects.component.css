@@ -2,9 +2,6 @@ section.project-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100vw;
-  min-height: 100vh;
-  padding-top: 80px;
 }
 
 section.project-section main {
@@ -454,4 +451,109 @@ section.project-section
   margin: 0 10px;
   color: var(--secondary-color);
   font-family: "Courier New", Courier, monospace;
+}
+
+@media screen and (max-width: 1280px) {
+  section.portfolio-section > main {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  section.project-section
+    main
+    div.other-projects
+    div.project-container
+    div.project-banner {
+    flex: 0 1 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  section.portfolio-section > main {
+    width: 75%;
+  }
+
+  section.project-section
+    main
+    div.main-projects
+    div.feature-project
+    div.img-wrapper {
+    height: 250px;
+  }
+
+  section.project-section
+    main
+    div.main-projects
+    div.feature-project
+    div.data-container
+    h5.top-title {
+    font-size: 12px;
+  }
+
+  section.project-section
+    main
+    div.main-projects
+    div.feature-project
+    div.data-container
+    h2
+    a {
+    font-size: 22px;
+  }
+
+  section.project-section
+    main
+    div.main-projects
+    div.feature-project
+    div.data-container
+    div.description {
+    font-size: 14px;
+  }
+
+  section.project-section
+    main
+    div.main-projects
+    div.feature-project
+    div.data-container
+    ul.technology
+    li {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  section.portfolio-section > main {
+    width: 98%;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  section.project-section main h2::after {
+    width: 50%;
+  }
+
+  section.project-section main div.main-projects div.feature-project,
+  section.project-section main div.main-projects div.feature-project.odd {
+    flex-direction: column-reverse;
+  }
+
+  section.project-section
+    main
+    div.main-projects
+    div.feature-project
+    div.data-container
+    div.description {
+    right: 0;
+  }
+
+  section.project-section
+    main
+    div.main-projects
+    div.feature-project.odd
+    div.data-container
+    div.description {
+    left: 0;
+  }
 }
