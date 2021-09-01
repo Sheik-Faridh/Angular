@@ -58,7 +58,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
     const el: HTMLElement | null = document.querySelector(
       `#${name.toLowerCase()}`
     );
-    el && el.scrollIntoView({ behavior: 'smooth' });
+    //el && el.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => el && el.scrollIntoView({ behavior: 'smooth' }), 800);
     this.showMenuIcon = false;
   }
 
