@@ -525,7 +525,7 @@ section.project-section
 @media screen and (max-width: 850px) {
   section.portfolio-section > main {
     width: 98%;
-    padding: 20px;
+    padding: 13px;
   }
 }
 

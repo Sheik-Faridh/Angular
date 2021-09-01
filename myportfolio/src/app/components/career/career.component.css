@@ -422,12 +422,36 @@ section.career-section main a:focus::after {
 @media screen and (max-width: 850px) {
   section.portfolio-section > main {
     width: 98%;
-    padding: 20px;
+    padding: 13px;
   }
 }
 
 @media screen and (max-width: 676px) {
   section.career-section main h2::after {
     width: 50%;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  section.career-section
+    main
+    div.education-container
+    div.grid-container
+    div.education-details
+    h2 {
+    font-size: 15px;
+  }
+
+  section.career-section
+    main
+    div.education-container
+    div.grid-container
+    div.education-details
+    h4 {
+    font-size: 10px;
+  }
+
+  section.career-section main div.experience-wrapper div.work-details ul li {
+    font-size: 14px;
   }
 }

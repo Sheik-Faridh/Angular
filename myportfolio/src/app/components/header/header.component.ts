@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { fromEvent, Observable, Subscription } from 'rxjs';
 import { fadeInDownAnimation } from 'src/app/app.animation';
 import { ILink } from './header.interface';
 
@@ -8,8 +9,14 @@ import { ILink } from './header.interface';
   styleUrls: ['./header.component.css'],
   animations: [fadeInDownAnimation],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit, OnDestroy {
+  scrollObservable$!: Observable<Event>;
+  scrollSubscription$!: Subscription;
+  resizeObservable$!: Observable<Event>;
+  resizeSubscription$!: Subscription;
   scrollTop: number = 0;
+  showMenuListIcon!: boolean;
+  showMenuIcon: boolean = false;
   links: ILink[] = [
     {
       href: '/#about',
@@ -35,9 +42,16 @@ export class HeaderComponent {
 
   constructor() {}
 
-  @HostListener('window:scroll')
-  handleScroll() {
-    this.scrollTop = document.documentElement.scrollTop;
+  ngOnInit() {
+    this.showMenuListIcon = window.innerWidth < 590 ? true : false;
+    this.scrollObservable$ = fromEvent(window, 'scroll');
+    this.scrollSubscription$ = this.scrollObservable$.subscribe(() => {
+      this.scrollTop = document.documentElement.scrollTop;
+    });
+    this.resizeObservable$ = fromEvent(window, 'resize');
+    this.resizeSubscription$ = this.resizeObservable$.subscribe(() => {
+      this.showMenuListIcon = window.innerWidth < 590 ? true : false;
+    });
   }
 
   scrollTo(name: string) {
@@ -45,5 +59,11 @@ export class HeaderComponent {
       `#${name.toLowerCase()}`
     );
     el && el.scrollIntoView({ behavior: 'smooth' });
+    this.showMenuIcon = false;
+  }
+
+  ngOnDestroy() {
+    this.scrollSubscription$.unsubscribe();
+    this.resizeSubscription$.unsubscribe();
   }
 }

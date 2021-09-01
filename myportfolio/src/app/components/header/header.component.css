@@ -28,12 +28,22 @@ header.app-header div.menu-container {
   align-items: center;
 }
 
+header.app-header div.menu-container div.menu-list-icon-container i {
+  font-size: 30px;
+  color: var(--white);
+}
+
+header.app-header div.menu-container div.menu-list-icon-container i:hover {
+  color: var(--primary-color);
+}
+
 header.app-header div.btn-wrapper {
   margin: 0 10px;
 }
 
 header.app-header ul.menu {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   list-style: none;
 }
@@ -54,4 +64,47 @@ header.app-header ul.menu a i {
 
 header.app-header ul.menu a:hover {
   color: var(--primary-color);
+}
+
+header.app-header
+  div.menu-container
+  div.menu-list-icon-container
+  div.menu-list-wrapper {
+  position: fixed;
+  width: 100vw;
+  top: 55px;
+  left: 0;
+  z-index: 10;
+}
+
+header.app-header
+  div.menu-container
+  div.menu-list-icon-container
+  div.menu-list-wrapper
+  ul.menu {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-navy);
+  box-shadow: 0 10px 30px -10px var(--box-shadow-color);
+}
+
+header.app-header
+  div.menu-container
+  div.menu-list-icon-container
+  div.menu-list-wrapper
+  ul.menu
+  li {
+  margin: 10px 0;
+}
+
+header.app-header
+  div.menu-container
+  div.menu-list-icon-container
+  div.menu-list-wrapper
+  ul.menu
+  li
+  a
+  i {
+  font-size: 20px;
 }

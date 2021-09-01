@@ -3,6 +3,17 @@
     <img src="assets/svg/logo.svg" alt="Portfolio Logo" />
   </div>
   <div class="menu-container">
+    <div *ngIf="showMenuListIcon; else icons" class="menu-list-icon-container">
+      <i class="bi bi-list" (click)="showMenuIcon = !showMenuIcon"></i>
+      <div class="menu-list-wrapper" *ngIf="showMenuIcon">
+        <ng-container *ngTemplateOutlet="headerLinks"></ng-container>
+      </div>
+    </div>
+    <ng-template #icons>
+      <ng-container *ngTemplateOutlet="headerLinks"></ng-container>
+    </ng-template>
+  </div>
+  <ng-template #headerLinks>
     <ul class="menu">
       <li *ngFor="let link of links" (click)="scrollTo(link.name)" @fadeInDown>
         <a [href]="link.href">
@@ -11,5 +22,5 @@
         </a>
       </li>
     </ul>
-  </div>
+  </ng-template>
 </header>

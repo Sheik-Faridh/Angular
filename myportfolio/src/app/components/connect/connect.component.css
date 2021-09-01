@@ -81,6 +81,6 @@ section.connect-section footer a:hover {
 @media screen and (max-width: 850px) {
   section.connect-section > main {
     width: 98%;
-    padding: 20px;
+    padding: 13px;
   }
 }
