@@ -1,0 +1,42 @@
+section.pagenotfound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  user-select: none;
+}
+
+section.pagenotfound div.image-wrapper {
+  position: fixed;
+  top: 0px;
+  left: 35px;
+  width: 80px;
+}
+
+section.pagenotfound h1 {
+  font-size: 14vw;
+  line-height: 1;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+section.pagenotfound h5 {
+  font-size: 4vw;
+  line-height: 1;
+  color: var(--secondary-light-color);
+}
+
+section.pagenotfound button {
+  margin-top: 40px;
+  font-size: 24px;
+  padding: 16px 24px;
+  height: 50px;
+}
+
+section.pagenotfound button a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
