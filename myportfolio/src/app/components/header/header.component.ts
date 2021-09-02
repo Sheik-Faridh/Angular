@@ -54,13 +54,41 @@ export class HeaderComponent implements OnInit, OnDestroy {
     });
   }
 
-  scrollTo(name: string) {
-    const el: HTMLElement | null = document.querySelector(
+  delay(time: number) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+  }
+
+  isEleRendered(targetEle: HTMLElement | null) {
+    return targetEle
+      ? targetEle.querySelectorAll(':scope > main').length === 1
+      : false;
+  }
+
+  async scrollTo(name: string) {
+    this.showMenuIcon = false;
+    const targetEle: HTMLElement | null = document.querySelector(
       `#${name.toLowerCase()}`
     );
-    el && el.scrollIntoView({ behavior: 'smooth' });
-    this.showMenuIcon = false;
-    setTimeout(() => el && el.scrollIntoView({ behavior: 'smooth' }), 500);
+    const isRendered = this.isEleRendered(targetEle);
+    if (isRendered)
+      return targetEle && targetEle.scrollIntoView({ behavior: 'smooth' });
+    const index = this.links.findIndex((l) => l.name === name);
+    if (index >= 0) {
+      for (let i = 0; i <= index; i++) {
+        const el: HTMLElement | null = document.querySelector(
+          `#${this.links[i].name.toLowerCase()}`
+        );
+        if (this.isEleRendered(el)) {
+          this.links[i].name == name &&
+            el &&
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          continue;
+        } else {
+          el && el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          await this.delay(700);
+        }
+      }
+    }
   }
 
   ngOnDestroy() {
