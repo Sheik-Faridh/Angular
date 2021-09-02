@@ -38,7 +38,11 @@
           </button>
           <div
             class="active-line"
-            [style]="'transform: translateY(calc(' + activeIndex + '* 42px));'"
+            [style]="
+              isXTranslate
+                ? 'transform: translatex(calc(' + activeIndex + '* 120px));'
+                : 'transform: translateY(calc(' + activeIndex + '* 42px));'
+            "
           ></div>
         </div>
         <div class="border-marker">

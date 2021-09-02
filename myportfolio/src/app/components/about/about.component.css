@@ -203,7 +203,7 @@ section.about-section main div.technology-container span {
 @media screen and (max-width: 850px) {
   section.portfolio-section > main {
     width: 98%;
-    padding: 13px;
+    padding: 13px 25px;
   }
 }
 
