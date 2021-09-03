@@ -75,6 +75,25 @@ header.app-header
   top: 55px;
   left: 0;
   z-index: 10;
+  background: var(--bg-navy);
+}
+
+header.app-header
+  div.menu-container
+  div.menu-list-icon-container
+  div.menu-list-wrapper
+  div.close-icon-wrapper {
+  margin: 20px 0 0 20px;
+}
+
+header.app-header
+  div.menu-container
+  div.menu-list-icon-container
+  div.menu-list-wrapper
+  div.close-icon-wrapper
+  span {
+  cursor: pointer;
+  color: var(--secondary-lightest-color);
 }
 
 header.app-header
@@ -85,8 +104,8 @@ header.app-header
   width: 100%;
   flex-direction: column;
   align-items: center;
-  background: var(--bg-navy);
   box-shadow: 0 10px 30px -10px var(--box-shadow-color);
+  margin-bottom: 10px;
 }
 
 header.app-header

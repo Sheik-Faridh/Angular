@@ -1,13 +1,13 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { fromEvent, Observable, Subscription } from 'rxjs';
-import { fadeInDownAnimation } from 'src/app/app.animation';
+import { fadeAnimation, fadeInDownAnimation } from 'src/app/app.animation';
 import { ILink } from './header.interface';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  animations: [fadeInDownAnimation],
+  animations: [fadeInDownAnimation, fadeAnimation],
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   scrollObservable$!: Observable<Event>;
