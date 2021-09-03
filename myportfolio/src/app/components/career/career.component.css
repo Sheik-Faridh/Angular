@@ -142,10 +142,6 @@ section.career-section
   margin: 0 5px;
 }
 
-section.career-section main div.experience-wrapper {
-  background-color: transparent;
-}
-
 section.career-section main div.experience-wrapper div.border-marker {
   padding: 10px;
   margin-left: 10px;
@@ -461,6 +457,7 @@ section.career-section main a:focus::after {
 
   section.career-section main div.experience-container div.experience-wrapper {
     flex-direction: column;
+    background-color: transparent;
   }
 
   section.career-section

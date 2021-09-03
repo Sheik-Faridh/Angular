@@ -1,6 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import profileJSON from '../../../profile.json';
-import { IMainProjects, IOtherProjects } from './projects.interface';
+import {
+  IAnimation,
+  IMainProjects,
+  IOtherProjects,
+} from './projects.interface';
 import {
   fadeAnimation,
   fadeInUpAnimation,
@@ -14,8 +18,17 @@ import {
   animations: [fadeAnimation, fadeInUpAnimation, listAnimation],
 })
 export class ProjectsComponent {
-  mainProjects: IMainProjects[] = profileJSON.projects.mainProjects;
-  otherProjects: IOtherProjects[] = profileJSON.projects.otherProjects;
+  mainProjects: (IMainProjects & IAnimation)[] =
+    profileJSON.projects.mainProjects.map((p: IMainProjects) => ({
+      ...p,
+      animationState: 'inactive',
+    }));
+  otherProjects: (IOtherProjects & IAnimation)[] =
+    profileJSON.projects.otherProjects.map((l: IOtherProjects) => ({
+      ...l,
+      animationState: 'inactive',
+    }));
   renderComponent: boolean = false;
+  showProjectListAnimation: boolean = false;
   constructor() {}
 }

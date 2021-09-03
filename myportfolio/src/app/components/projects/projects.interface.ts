@@ -14,3 +14,7 @@ export interface IOtherProjects {
   description: string;
   stack: string[];
 }
+
+export interface IAnimation {
+  animationState: 'active' | 'inactive';
+}

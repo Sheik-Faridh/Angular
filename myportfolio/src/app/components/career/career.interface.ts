@@ -19,3 +19,7 @@ export interface IAchievement {
   description: string;
   link: string | null;
 }
+
+export interface IAnimation {
+  animationState: 'active' | 'inactive';
+}

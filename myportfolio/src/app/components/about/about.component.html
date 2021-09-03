@@ -44,8 +44,12 @@
           </p>
         </div>
       </div>
-      <div class="image-container" @fadeInUp>
-        <div class="image-wrapper">
+      <div class="image-container">
+        <div
+          class="image-wrapper"
+          (deferLoadAnimation)="imageAnimationState = 'active'"
+          [@fadeInUp]="imageAnimationState"
+        >
           <img src="../../../assets/img/profile_pic.jpg" alt="Profile Pic" />
         </div>
       </div>
@@ -53,16 +57,17 @@
     <div class="technology-container">
       <div
         *ngFor="let technology of technologies"
-        [matTooltip]="technology.toUpperCase()"
+        [matTooltip]="technology.name.toUpperCase()"
         matTooltipClass="social-tooltip"
         matTooltipPosition="right"
-        @listAnimation
+        (deferLoadAnimation)="technology.animationState = 'active'"
+        [@fadeIn]="technology.animationState"
       >
         <img
-          [src]="'../../../assets/svg/' + technology + '.svg'"
-          [alt]="technology"
+          [src]="'../../../assets/svg/' + technology.name + '.svg'"
+          [alt]="technology.name"
         />
-        <span>{{ technology.toUpperCase() }}</span>
+        <span>{{ technology.name.toUpperCase() }}</span>
       </div>
     </div>
   </main>

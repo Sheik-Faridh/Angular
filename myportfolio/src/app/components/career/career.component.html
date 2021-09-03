@@ -9,7 +9,11 @@
       <h2 class="title">
         <i class="bi bi-receipt-cutoff" @fadeInUp></i>Education
       </h2>
-      <div class="education-wrapper wrapper-container" @listAnimation>
+      <div
+        class="education-wrapper wrapper-container"
+        (deferLoadAnimation)="edAnimationState = 'active'"
+        [@fadeInUp]="edAnimationState"
+      >
         <div *ngFor="let education of educations" class="grid-container">
           <div class="icon-wrapper"><i class="bi bi-bank"></i></div>
           <div class="education-details">
@@ -26,13 +30,16 @@
     </div>
     <div class="experience-container" @fadeInUp>
       <h2 class="title" @fadeIn><i class="bi bi-briefcase"></i>Experience</h2>
-      <div class="experience-wrapper wrapper-container">
+      <div
+        class="experience-wrapper wrapper-container"
+        (deferLoadAnimation)="expAnimationState = 'active'"
+        [@fadeInUp]="expAnimationState"
+      >
         <div class="experience-list">
           <button
             *ngFor="let experience of workExperiences; index as i"
             [attr.aria-selected]="activeExperience === experience.company"
             (click)="setSelected(experience.company, i)"
-            @listAnimation
           >
             {{ experience.company }}
           </button>
@@ -51,7 +58,7 @@
               *ngFor="let experience of workExperiences"
               [ngSwitchCase]="experience.company"
             >
-              <div class="company-details" @listAnimation>
+              <div class="company-details" @fadeIn>
                 <h3>
                   {{ experience.designation }}
                   <span
@@ -85,7 +92,8 @@
         <div
           *ngFor="let achievement of achievements"
           class="achievement-details"
-          @listAnimation
+          (deferLoadAnimation)="achievement.animationState = 'active'"
+          [@listAnimation]="achievement.animationState"
         >
           <h2 *ngIf="achievement.link !== null; else elseBlock">
             <a [href]="achievement.link" rel="noreferrer" target="_blank">

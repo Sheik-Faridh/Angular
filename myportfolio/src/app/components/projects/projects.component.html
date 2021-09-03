@@ -9,7 +9,8 @@
       <div
         *ngFor="let mainProject of mainProjects; let odd = odd"
         [ngClass]="{ 'feature-project': true, odd: odd }"
-        @listAnimation
+        [@listAnimation]="mainProject.animationState"
+        (deferLoadAnimation)="mainProject.animationState = 'active'"
       >
         <div class="img-wrapper">
           <div class="mask-layer"></div>
@@ -58,7 +59,8 @@
         <div
           *ngFor="let otherProject of otherProjects"
           class="project-banner"
-          @listAnimation
+          [@listAnimation]="otherProject.animationState"
+          (deferLoadAnimation)="otherProject.animationState = 'active'"
         >
           <div class="header">
             <span class="material-icons-outlined folder-icon">folder</span>

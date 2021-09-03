@@ -1,26 +1,45 @@
 import {
   animate,
   keyframes,
-  stagger,
   style,
   transition,
-  trigger,
   query,
+  stagger,
+  trigger,
 } from '@angular/animations';
 
 export const listAnimation = trigger('listAnimation', [
-  transition('* <=> *', [
+  transition('inactive => active', [
+    animate(
+      '1s',
+      keyframes([
+        style({
+          transform: 'translateY(100px)',
+          opacity: 0,
+          offset: 0,
+        }),
+        style({ transform: 'translateY(40px)', opacity: 0.8, offset: 0.8 }),
+        style({
+          transform: 'translateY(0)',
+          opacity: 1,
+          offset: 1.0,
+        }),
+      ])
+    ),
+  ]),
+  transition('* => *', [
+    // each time the binding value changes
+    query(':leave', [stagger(100, [animate('0.5s', style({ opacity: 0 }))])], {
+      optional: true,
+    }),
     query(
       ':enter',
       [
         style({ opacity: 0 }),
-        stagger('60ms', animate('600ms ease-out', style({ opacity: 1 }))),
+        stagger(100, [animate('0.5s', style({ opacity: 1 }))]),
       ],
       { optional: true }
     ),
-    query(':leave', animate('200ms', style({ opacity: 0 })), {
-      optional: true,
-    }),
   ]),
 ]);
 
@@ -32,6 +51,21 @@ export const fadeAnimation = trigger('fadeIn', [
   transition(':leave', [
     style({ opacity: 1 }),
     animate('500ms', style({ opacity: 0 })),
+  ]),
+  transition('inactive => active', [
+    animate(
+      '1s ease-in',
+      keyframes([
+        style({
+          transform: 'translateY(20px)',
+          offset: 0,
+        }),
+        style({
+          transform: 'translateY(0)',
+          offset: 1.0,
+        }),
+      ])
+    ),
   ]),
 ]);
 
@@ -51,6 +85,19 @@ export const fadeInDownAnimation = trigger('fadeInDown', [
 
 export const fadeInUpAnimation = trigger('fadeInUp', [
   transition('void => *', [
+    style({
+      transform: 'translateY(100px)',
+      opacity: 0,
+    }),
+    animate(
+      '1s',
+      style({
+        transform: 'translateY(0)',
+        opacity: 1,
+      })
+    ),
+  ]),
+  transition('inactive => active', [
     style({
       transform: 'translateY(100px)',
       opacity: 0,
