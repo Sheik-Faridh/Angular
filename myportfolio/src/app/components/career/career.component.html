@@ -58,7 +58,7 @@
               *ngFor="let experience of workExperiences"
               [ngSwitchCase]="experience.company"
             >
-              <div class="company-details" @fadeIn>
+              <div class="company-details">
                 <h3>
                   {{ experience.designation }}
                   <span

@@ -482,6 +482,7 @@ section.career-section main a:focus::after {
     max-width: 120px;
     text-align: center;
     border: none;
+    padding: 0;
     border-bottom: 2px solid var(--secondary-dark-color);
   }
 
