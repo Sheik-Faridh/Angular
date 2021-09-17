@@ -18,9 +18,10 @@ export class SlotsComponent implements OnInit {
     this.slots = value;
     this.slotsLength = this.slots?.length || 0;
     this.dataSource.data = this.slots || [];
+    if (this.paginator) this.paginator.pageIndex = 0;
   }
 
-  @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngOnInit() {
     this.dataSource.paginator = this.paginator;

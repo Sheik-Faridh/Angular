@@ -16,17 +16,9 @@ div.slot-container {
       text-align: center;
       margin-bottom: 20px;
     }
-
-    & div.table-container[hidden] {
-      visibility: hidden;
-    }
   }
 
   & h3.record-not-found {
     text-align: center;
   }
-}
-
-div.slot-container[hidden] {
-  visibility: hidden;
 }
