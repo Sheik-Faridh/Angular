@@ -1,5 +1,6 @@
 div.slot-container {
   display: flex;
+  width: 100vw;
   justify-content: center;
 
   & div.slot-wrapper {
@@ -16,101 +17,16 @@ div.slot-container {
       margin-bottom: 20px;
     }
 
-    & table {
-      border: 1px solid #cfd7df;
-      border-collapse: collapse;
-
-      & thead th {
-        padding: 15px;
-        background-color: #cfd7df;
-      }
-
-      & tbody {
-        & tr td {
-          vertical-align: top;
-          border-left: 1px solid #cfd7df;
-          border-right: 1px solid #cfd7df;
-          padding: 7px 14px;
-
-          & div.vaccine-fee-container div.vaccine-fee-wrapper {
-            margin: 10px 0;
-
-            & span.vaccine-name {
-              font-weight: 600;
-              font-size: 12px;
-            }
-
-            & span.vaccine-name::after {
-              content: "-";
-              margin: 0 10px;
-            }
-
-            & span.fee {
-              font-size: 12px;
-              color: rgb(111, 124, 135);
-            }
-          }
-
-          & div.slot-box {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-
-            & div.vaccine-box {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              gap: 6px;
-
-              & div.date {
-                color: rgb(111, 124, 135);
-                font-size: 12px;
-                font-weight: 600;
-              }
-
-              & div.dose-total {
-                display: flex;
-                text-align: center;
-                align-items: stretch;
-                border: 1px solid #ccc;
-
-                & > span {
-                  font-size: 12px;
-                  padding: 5px 7px;
-                }
-
-                & > span.totallists {
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  width: 35px;
-                  padding: 0;
-                  background-color: #b4e5da;
-                }
-              }
-
-              & div > span.age-limit {
-                font-size: 14px;
-                color: #d72d30;
-                font-weight: 500;
-              }
-            }
-          }
-        }
-
-        & tr td:first-child {
-          border-left: none;
-        }
-
-        & tr td:last-child {
-          border-right: none;
-        }
-
-        & tr:nth-child(2n) {
-          background-color: #f6f8fa;
-        }
-      }
+    & div.table-container[hidden] {
+      visibility: hidden;
     }
   }
+
+  & h3.record-not-found {
+    text-align: center;
+  }
+}
+
+div.slot-container[hidden] {
+  visibility: hidden;
 }

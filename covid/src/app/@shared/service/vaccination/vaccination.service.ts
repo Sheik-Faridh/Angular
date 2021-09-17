@@ -49,7 +49,7 @@ export class VaccinationService {
     type: 'Pincode' | 'District'
   ): Observable<IVaccinationSlotRes> {
     const queryStringMap = {
-      PinCode: `calendarByPin?pincode=${entityId}&date=${getTodayDate()}`,
+      Pincode: `calendarByPin?pincode=${entityId}&date=${getTodayDate()}`,
       District: `calendarByDistrict?district_id=${entityId}&date=${getTodayDate()}`,
     };
     const queryString = queryStringMap[type as keyof typeof queryStringMap];

@@ -1,0 +1,21 @@
+section.page-notfound-container {
+  width: 100vw;
+  height: 100vh;
+
+  & main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 30px;
+
+    & div.image-wrapper {
+      width: 40%;
+
+      & img {
+        width: 100%;
+      }
+    }
+  }
+}

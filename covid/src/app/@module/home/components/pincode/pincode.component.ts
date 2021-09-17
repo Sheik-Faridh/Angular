@@ -19,7 +19,7 @@ export class PincodeComponent {
   constructor(private vaccinationService: VaccinationService) {}
 
   handleChange(event: any) {
-    this.pincode = event.default.value;
+    this.pincode = event.detail.value;
   }
 
   public validate(): boolean {
