@@ -1,6 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
+
 import { HttpClientModule } from '@angular/common/http';
 
 import { MatTableModule } from '@angular/material/table';
@@ -17,7 +18,7 @@ import { SlotsComponent } from './@module/home/components/slots/slots.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotfoundComponent } from './@module/notfound/notfound.component';
 
-const MaterialModule = [MatTableModule, MatPaginatorModule];
+const MaterialModule = [MatPaginatorModule, MatTableModule];
 
 @NgModule({
   declarations: [

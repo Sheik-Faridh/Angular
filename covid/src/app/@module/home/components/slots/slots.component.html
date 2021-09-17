@@ -1,7 +1,7 @@
 <div class="slot-container" *ngIf="slots !== undefined">
   <div class="slot-wrapper">
     <h2>Slots Results</h2>
-    <div class="table-container" [hidden]="slotsLength === 0">
+    <div class="table-container" *ngIf="slotsLength !== 0; else noRecord">
       <div class="mat-elevation-z8">
         <table mat-table [dataSource]="dataSource" class="slot-results">
           <ng-container matColumnDef="hospital">
@@ -65,7 +65,7 @@
                   </div>
                   <div>
                     <span class="age-limit"
-                      >{{ session.min_age_limit }} & above</span
+                      >{{ session.min_age_limit }} & Above</span
                     >
                   </div>
                 </div>
@@ -79,16 +79,17 @@
           <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
         </table>
         <mat-paginator
+          (page)="onPaginate($event)"
           [length]="slotsLength"
-          [pageSize]="20"
+          [pageSize]="10"
           aria-label="Select page of slot results"
         ></mat-paginator>
       </div>
     </div>
+    <ng-template #noRecord>
+      <h3 [hidden]="slotsLength !== 0" class="record-not-found">
+        No Vaccination center is available
+      </h3>
+    </ng-template>
   </div>
-  <!-- <ng-template #noRecord> -->
-  <h3 [hidden]="slotsLength !== 0" class="record-not-found">
-    No Vaccination center is available
-  </h3>
-  <!-- </ng-template> -->
 </div>
