@@ -1,0 +1,84 @@
+<div class="slot-container" *ngIf="slots !== undefined">
+  <div class="slot-wrapper">
+    <h2>Slots</h2>
+    <div class="table-container" *ngIf="slots.length !== 0; else noRecord">
+      <table>
+        <thead>
+          <tr>
+            <th>Hospital</th>
+            <th>Slots</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let slot of slots">
+            <td>
+              <h4>
+                {{ slot.block_name }}
+                <fw-label
+                  value="Free"
+                  color="green"
+                  *ngIf="slot.fee_type === 'Free'"
+                ></fw-label>
+                <fw-label
+                  value="Paid"
+                  color="yellow"
+                  *ngIf="slot.fee_type === 'Paid'"
+                ></fw-label>
+              </h4>
+              <span>{{ slot.address }}</span>
+              <div
+                *ngIf="slot.vaccine_fees.length !== 0"
+                class="vaccine-fee-container"
+              >
+                <div
+                  *ngFor="let fee of slot.vaccine_fees"
+                  class="vaccine-fee-wrapper"
+                >
+                  <div class="fee-data">
+                    <span class="vaccine-name">{{ fee.vaccine }}</span>
+                    <span class="fee">{{ fee.fee }}</span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="slot-box">
+                <div class="vaccine-box" *ngFor="let session of slot.sessions">
+                  <div class="date">
+                    {{ session.date }}
+                  </div>
+                  <div class="vaccine-name">
+                    <h5 class="name">{{ session.vaccine }}</h5>
+                  </div>
+                  <div class="dose-total">
+                    <span title="Dose 1"
+                      ><p>D1</p>
+                      {{ session.available_capacity_dose1 }} </span
+                    ><span class="totallists">
+                      {{
+                        session.available_capacity_dose1 +
+                          session.available_capacity_dose2
+                      }} </span
+                    ><span title="Dose 2"
+                      ><p>D2</p>
+                      {{ session.available_capacity_dose2 }}
+                    </span>
+                  </div>
+                  <div>
+                    <span class="age-limit"
+                      >{{ session.min_age_limit }} & above</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <ng-template #noRecord>
+    <h3>No Vaccination center is available</h3>
+  </ng-template>
+</div>

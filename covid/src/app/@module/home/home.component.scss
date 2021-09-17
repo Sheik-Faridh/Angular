@@ -1,0 +1,58 @@
+section.vaccination-monitor-section {
+  padding: 25px;
+  overflow-x: hidden;
+  & main {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--bg-screen);
+
+    & div.container {
+      width: 40%;
+      border-radius: 5px;
+      background-color: var(--milk-color);
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+        rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+        rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+      padding: 15px 25px;
+
+      & h3 {
+        font-size: 18px;
+        font-weight: 500;
+
+        & img {
+          width: 18px;
+          margin: 0 10px;
+        }
+      }
+
+      & div.logo-container {
+        display: flex;
+        justify-content: center;
+        margin: 25px 0;
+
+        & div.logo-wrapper {
+          width: 18%;
+
+          & img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      & h2 {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      & div.vaccination-search-container {
+        margin: 15px 0;
+      }
+    }
+  }
+}

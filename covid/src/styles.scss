@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg-screen: #f6f8fa;
+  --milk-color: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: National-Book, National-Medium, sans-serif;
+  font-size: 16px;
+  color: #12344d;
+}
+
+div.tabs > ul.tabs__items::slotted {
+  display: flex;
+  justify-content: center;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

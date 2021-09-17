@@ -1,0 +1,34 @@
+<section class="vaccination-monitor-section">
+  <main class="card">
+    <div class="container">
+      <h3>
+        COVID-19 Vaccines Near me<img
+          src="../../../assets/img/india.png"
+          alt="India Flag"
+        />
+      </h3>
+      <div class="logo-container">
+        <div class="logo-wrapper">
+          <img src="../../../assets//img/logo.png" alt="logo" />
+        </div>
+      </div>
+      <h2>Monitor Vaccine Availability</h2>
+      <app-livecount></app-livecount>
+      <div class="vaccination-search-container">
+        <fw-tabs>
+          <fw-tab tab-header="Search By PIN"
+            ><app-pincode
+              (updateVaccinationSlots)="updateVaccinationSlots($event)"
+            ></app-pincode
+          ></fw-tab>
+          <fw-tab tab-header="Search By City"
+            ><app-district
+              (updateVaccinationSlots)="updateVaccinationSlots($event)"
+            ></app-district
+          ></fw-tab>
+        </fw-tabs>
+      </div>
+    </div>
+    <app-slots [slots]="vaccinationSlots"></app-slots>
+  </main>
+</section>

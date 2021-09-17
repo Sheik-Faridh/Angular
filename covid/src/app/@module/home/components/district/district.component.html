@@ -1,0 +1,32 @@
+<div class="input-container">
+  <fw-toast id="district_toast"></fw-toast>
+  <fw-select
+    *ngIf="stateOptions.length !== 0"
+    label="State"
+    required="true"
+    placeholder="Choose State"
+    [state]="stateSelect"
+    state-text="Please choose the state"
+    (fwChange)="handleStateChange($event)"
+  >
+    <fw-select-option *ngFor="let option of stateOptions" [value]="option.id">{{
+      option.name
+    }}</fw-select-option>
+  </fw-select>
+  <fw-select
+    *ngIf="districtOption.length !== 0"
+    label="District"
+    required="true"
+    [state]="districtSelect"
+    placeholder="Choose District"
+    state-text="Please choose the district"
+    (fwChange)="handleDistrictChange($event)"
+  >
+    <fw-select-option
+      *ngFor="let option of districtOption"
+      [value]="option.id"
+      >{{ option.name }}</fw-select-option
+    >
+  </fw-select>
+  <app-search [loading]="loading" (handleSearch)="handleSearch()"></app-search>
+</div>

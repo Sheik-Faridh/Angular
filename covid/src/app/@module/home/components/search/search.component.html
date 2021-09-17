@@ -1,0 +1,14 @@
+<div class="search-container">
+  <fw-button
+    color="primary"
+    (fwClick)="handleClick()"
+    *ngIf="!loading; else loaderButton"
+  >
+    Search <fw-icon name="search" color="white"></fw-icon
+  ></fw-button>
+  <ng-template #loaderButton>
+    <fw-button color="primary">
+      <fw-spinner size="small" color="#fff"></fw-spinner>
+    </fw-button>
+  </ng-template>
+</div>

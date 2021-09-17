@@ -1,0 +1,14 @@
+<div class="input-container">
+  <fw-toast id="pincode_toast"></fw-toast>
+  <fw-input
+    label="Pincode"
+    state-text="Please enter the valid pincode"
+    placeholder="Enter pincode"
+    type="number"
+    required
+    clear-input
+    [value]="pincode"
+    (fwChange)="handleChange($event)"
+  ></fw-input>
+  <app-search [loading]="loading" (handleSearch)="handleSearch()"></app-search>
+</div>
