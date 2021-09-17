@@ -50,10 +50,13 @@ export class DistrictComponent implements OnInit {
   }
 
   private buildDistrictOption(data: IDistrictRes) {
-    this.districtOption = data.districts.map((d) => ({
-      id: d.district_id,
-      name: d.district_name,
-    }));
+    this.districtOption = [];
+    setTimeout(() => {
+      this.districtOption = data.districts.map((d) => ({
+        id: d.district_id,
+        name: d.district_name,
+      }));
+    });
   }
 
   public handleStateChange(event: any) {
