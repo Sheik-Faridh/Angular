@@ -12,6 +12,5 @@ export class HomeComponent {
 
   public updateVaccinationSlots(slots: IVaccinationSlot[]) {
     this.vaccinationSlots = slots;
-    console.log(this.vaccinationSlots);
   }
 }

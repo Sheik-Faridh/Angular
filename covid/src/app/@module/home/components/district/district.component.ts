@@ -42,7 +42,7 @@ export class DistrictComponent implements OnInit {
     );
   }
 
-  private buildStateOptions(data: IStateRes) {
+  public buildStateOptions(data: IStateRes) {
     this.stateOptions = data.states.map((d) => ({
       id: d.state_id,
       name: d.state_name,

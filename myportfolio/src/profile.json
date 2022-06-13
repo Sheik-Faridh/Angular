@@ -131,6 +131,26 @@
   "projects": {
     "mainProjects": [
       {
+        "img_name": "vs_code_clone_screen.png",
+        "logo": "vs_code_clone_logo.png",
+        "description": "A Visual Studio Code Clone app shows its own code with the help of GitHub API. A CI/CD pipeline is setup with the GitHub Workflow for deploying the application on Netlify platform while pushing the code into main branch.",
+        "name": "Visual Studio Code Clone",
+        "stack": [
+          "React",
+          "TypeScript",
+          "MUI 5",
+          "IndexedDB",
+          "Splitter",
+          "Octokit",
+          "React Icons",
+          "RxJs",
+          "Monaco Editor",
+          "Terminal",
+          "Xterm.js"
+        ],
+        "link": "https://vscodeclone.netlify.app"
+      },
+      {
         "img_name": "code_editor_screen.png",
         "logo": "code_editor_logo.png",
         "description": "This app is used as an interview and screening tool to let the interviewee write down the programs that run. The application consists of rich features like collaborative editing, no login required for interviewee, and code playback options.",
